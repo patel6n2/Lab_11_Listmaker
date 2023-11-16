@@ -33,12 +33,18 @@ public class Main
         } while(!done);
     }
 
+    /**
+     * Add an item to the list (NOT insert)
+     */
     private static void add()
     {
         String listItem = SafeInput.getNonZeroLenString(in,"Enter the new list item");
         list.add(listItem);
     }
 
+    /**
+     * Delete an item from the list (numbered list displayed)
+     */
     private static void delete()
     {
         if(list.size() == 0)
@@ -59,6 +65,9 @@ public class Main
         }
     }
 
+    /**
+     * Print (display) the list
+     */
     private static void print()
     {
         System.out.println();
@@ -73,6 +82,9 @@ public class Main
         System.out.println();
     }
 
+    /**
+     * Quit the program (prompt for confirmation)
+     */
     private static void quit()
     {
         boolean quitYN = SafeInput.getYNConfirm(in,"Are you sure you want to quit?");
